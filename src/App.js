@@ -15,12 +15,12 @@ class App extends Component {
   state = { loggedIn: null };
   componentDidMount() {
     firebase.initializeApp({
-      apiKey: "AIzaSyBv-N41egdJCIIpJLAguLowVUPX41dT3ac",
-      authDomain: "authreactnative-dc4f9.firebaseapp.com",
-      databaseURL: "https://authreactnative-dc4f9.firebaseio.com",
-      projectId: "authreactnative-dc4f9",
-      storageBucket: "authreactnative-dc4f9.appspot.com",
-      messagingSenderId: "931017654942"
+      apiKey: 'AIzaSyBv-N41egdJCIIpJLAguLowVUPX41dT3ac',
+      authDomain: 'authreactnative-dc4f9.firebaseapp.com',
+      databaseURL: 'https://authreactnative-dc4f9.firebaseio.com',
+      projectId: 'authreactnative-dc4f9',
+      storageBucket: 'authreactnative-dc4f9.appspot.com',
+      messagingSenderId: '931017654942'
     });
 
     firebase.auth().onAuthStateChanged((user) => {
@@ -43,7 +43,7 @@ class App extends Component {
           </Card>
         );
       case false:
-        return <LoginForm />
+        return <LoginForm />;
       default:
         return <Spinner size="large" />;
     }
